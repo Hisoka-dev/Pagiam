@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G.O.L.F.A - Terminal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="scanline"></div>
+    
+    <div class="terminal">
+        <div class="screen" id="screen">
+            <div class="message">
+                <div class="avatar"></div>
+                <div class="text">> Sistema G.O.L.F.A inicializado</div>
+            </div>
+        </div>
+        
+        <div class="input-area">
+            <input type="text" id="userInput" placeholder="Escribe tu comando...">
+            <button id="sendBtn">ENVIAR</button>
+            <button id="voiceBtn">🎙️</button>
+        </div>
+    </div>
+
+    <script src="auth.js"></script>
+    <script src="app.js"></script>
+    <script src="secret.js" defer></script>
+    
+    <script>
+        // Verificar autenticación al cargar
+        if(!GolfaAuth.checkAuth()) {
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>
